@@ -1,2 +1,1 @@
-
-document.getElementById('cat-pic').src = "https://cataas.com/cat?filter=filter";
+var catSubmitEl = document.querySelector('#cat-button');
