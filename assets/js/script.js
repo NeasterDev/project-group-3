@@ -6,6 +6,13 @@ const gifEl = document.querySelector('#gif');
 const saysEl = document.querySelector('#says');
 const colorEl = document.querySelector('#color');
 
+// dog vars
+
+const dogForm = document.querySelector('#dog-form');
+const dogPic = document.querySelector('#dog-pic');
+const catLabel = document.querySelector('#cat-label');
+
+// https://cataas.com/#/
 formEl.addEventListener('submit', function(event) {
     event.preventDefault();
     var url = "https://cataas.com/cat";
@@ -21,6 +28,33 @@ formEl.addEventListener('submit', function(event) {
         console.log("colorEl");
         url += "?color=" + colorEl.value;
     }
-
     catEl.src = url;
+})
+// https://dog.ceo/dog-api/documentation/random
+
+// cat fact
+// https://meowfacts.herokuapp.com/
+dogForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    var url = "https://dog.ceo/api/breeds/image/random";
+    var factUrl = "https://meowfacts.herokuapp.com/";
+    fetch(url).then(function(response) {
+        return response.json();
+    }).then (function(data) {
+        url = data.message;
+        dogPic.src = url;
+    })
+
+    fetch(factUrl).then(function(response) {
+        return response.json();
+    }).then(function(data) {
+        var fact = data.data[0];
+        catLabel.textContent = fact;
+    })
+    
+    fetch("./api.json").then(function(response) {
+        return response.json();
+    }).then(function(data) {
+        console.log(data.fact);
+    });
 })
