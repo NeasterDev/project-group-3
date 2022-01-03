@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animals</title>
-    <link rel="stylesheet" href="style.css">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <header>
@@ -14,6 +13,7 @@
             <ul>
                 <li>
                     <a href="#dogs">Dogs</a>
+                    
                 </li>
                 <li>
                     <a href="#cats">Cats</a>
@@ -31,9 +31,37 @@
     <main>
         <section id="dogs-first" class="compare"></section>
             <h2>Dog Facts</h2>
+            <form id="dog-form" action="#">
+                <ul>
+                    <li>
+                        <input type="submit" name="dog-pic" id="dog-pic">
+                        <label for="dog-pic">Dog Picture!</label>
+                    </li>
+                </ul>
+            </form>
+            
         </section>
         <section id="cats-second" class="compare"></section>
             <h2>Cat Facts</h2>
+            <form id="cat-form" action="#">
+                <ul>
+                    <li>
+                        <input type="submit" name="dog-pic" id="dog-pic">
+                        <label for="cat-pic">Cat Picture!</label>
+                        <input type="checkbox" id="gif" name="gif">
+                        <label for="gif">Gif?</label>
+                        <input type="text" id="says" name="says">
+                        <label for="says">Caption</label>
+                        <br>
+                        <label for="colors">Colors</label>
+                        <select id="colors" name="colors">
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>
+                        </select>
+                    </li>
+                </ul>
+            </form>
              <img id="cat-pic" src="" alt="cat pic">
         </section>
         <section id="vote-on-animal" class="compare"></section>
@@ -45,5 +73,5 @@
         <h3>Made by Group 3</h3>
     </footer>
 </body>
-<script src="script.js"></script>
+<script src="./assets/js/script.js"></script>
 </html>
