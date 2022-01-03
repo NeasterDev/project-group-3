@@ -4,39 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animals</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <header>
-        <img src="" id="cat-picture" alt="cat">
+        <h1>Dogs vs Cats</h1>
+          <nav>
+            <ul>
+                <li>
+                    <a href="#dogs">Dogs</a>
+                    
+                </li>
+                <li>
+                    <a href="#cats">Cats</a>
+                </li>
+                <li>
+                    <a href="#vote">Vote</a>
+                </li>
+            
+            </ul>
+        </nav>
     </header>
-    <section class="cat-section">
-        <div>
-            <form id="form" action="#">
-                <ul>
-                    <input type="submit" id="cat-button" name="cat-button">
-                </ul>
-                <ul>
-                    <input type="checkbox" id="gif" name="gif">
-                    <label for="gif">Gif?</label>
-                    <input type="text" id="says" name="says">
-                    <label for="cute">Says?</label>
-                    <input type="text" id="color" name="color">
-                    <label for="color">Color?</label>
-                </ul>
-            </form>
+    <div class="first">
 
-            <form id="dog-form" action="">
+    </div>
+    <main>
+        <section id="dogs-first" class="compare"></section>
+            <h2>Dog Facts</h2>
+            <form id="dog-form" action="#">
                 <ul>
-                    <input type="submit" id="dog-button" name="dog-button">
-                    <label for="dog-button">Get dog</label>
-                    <img id="dog-pic" src="" alt="">
-                    <p id="cat-label"></p>
+                    <li>
+                        <input type="submit" name="dog-pic" id="dog-pic">
+                        <label for="dog-pic">Dog Picture!</label>
+                    </li>
                 </ul>
             </form>
-        </div>
-    </section>
+            
+        </section>
+        <section id="cats-second" class="compare"></section>
+            <h2>Cat Facts</h2>
+            <form id="cat-form" action="#">
+                <ul>
+                    <li>
+                        <input type="submit" name="dog-pic" id="dog-pic">
+                        <label for="cat-pic">Cat Picture!</label>
+                        <input type="checkbox" id="gif" name="gif">
+                        <label for="gif">Gif?</label>
+                        <input type="text" id="says" name="says">
+                        <label for="says">Caption</label>
+                        <br>
+                        <label for="colors">Colors</label>
+                        <select id="colors" name="colors">
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>
+                        </select>
+                    </li>
+                </ul>
+            </form>
+             <img id="cat-pic" src="" alt="cat pic">
+        </section>
+        <section id="vote-on-animal" class="compare"></section>
+        <h2>Vote for your favorite animal</h2>
+         </section>
 
-
-<script src="./assets/js/script.js"></script>
+    </main>
+    <footer>
+        <h3>Made by Group 3</h3>
+    </footer>
 </body>
+<script src="./assets/js/script.js"></script>
 </html>

@@ -1,10 +1,10 @@
 const inputEl = document.querySelector('#cat-input');
-const catEl = document.querySelector('#cat-picture');
-const formEl = document.querySelector('#form');
+const catEl = document.querySelector('#cat-pic');
+const catFormEl = document.querySelector('#cat-form');
 
 const gifEl = document.querySelector('#gif');
 const saysEl = document.querySelector('#says');
-const colorEl = document.querySelector('#color');
+const colorEl = document.querySelector('#colors');
 
 // dog vars
 
@@ -13,7 +13,7 @@ const dogPic = document.querySelector('#dog-pic');
 const catLabel = document.querySelector('#cat-label');
 
 // https://cataas.com/#/
-formEl.addEventListener('submit', function(event) {
+catFormEl.addEventListener('submit', function(event) {
     event.preventDefault();
     var url = "https://cataas.com/cat";
 
@@ -49,12 +49,13 @@ dogForm.addEventListener("submit", function(event) {
         return response.json();
     }).then(function(data) {
         var fact = data.data[0];
-        catLabel.textContent = fact;
+        //catLabel.textContent = fact;
+        console.log("Cat fact: " + fact)
     })
     
-    fetch("./api.json").then(function(response) {
-        return response.json();
-    }).then(function(data) {
-        console.log(data.fact);
-    });
+    // fetch("./api.json").then(function(response) {
+    //     return response.json();
+    // }).then(function(data) {
+    //     console.log(data.fact);
+    // });
 })
