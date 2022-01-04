@@ -38,6 +38,11 @@ li {
     margin: 10px;
 }
 
+a {
+    color: white;
+    cursor: pointer;
+}
+
 h1 {
     display: inline-block;
     font-size: 48px;
