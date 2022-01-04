@@ -10,34 +10,32 @@ main {
 
 header {
     padding: 20px;
-    background-color: #c40b0b;
+    background-color: #ce1b1b;
     color: #ffffff;
-    border-bottom: 5px solid black;
-}
-h1 {
-    display: inline-block;
-    font-size: 48px;
+    border-bottom: 3px solid black;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
+    color: #ffffff;
 }
 
 ul {
     display: flex;
     list-style-type: none;
-    width: 500px;
-    justify-content: space-around;
+    width: 500vh;
+    justify-content: right;
     font-size: 20px;
 }
 
 li {
     position: relative;
     text-decoration: none;
+    margin: 10px;
 }
 
-
-section {
-    padding: 60px;
+h1 {
+    display: inline-block;
+    font-size: 48px;
 }
