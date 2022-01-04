@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;400;900&family=Montserrat&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,600&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Animals</title>
 </head>
 <body>
     <header>
@@ -25,27 +28,25 @@
             </ul>
         </nav>
     </header>
-    <div class="first">
 
-    </div>
     <main>
         <section id="dogs-first" class="compare"></section>
-            <h2>Dog Facts</h2>
+            <button class="dog-factbtn" id="dog-factbtn"><h2>Dog Facts</h2></button>
             <form id="dog-form" action="#">
-                <ul>
-                    <li>
+                <div>
+                    <div>
                         <input type="submit" name="dog-pic" id="dog-pic">
                         <label for="dog-pic">Dog Picture!</label>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </form>
             
         </section>
         <section id="cats-second" class="compare"></section>
-            <h2>Cat Facts</h2>
+            <button class="cat-factbtn" id="cat-factbtn"><h2>Cat Facts</h2></button>
             <form id="cat-form" action="#">
-                <ul>
-                    <li>
+                <div>
+                    <div>
                         <input type="submit" name="dog-pic" id="dog-pic">
                         <label for="cat-pic">Cat Picture!</label>
                         <input type="checkbox" id="gif" name="gif">
@@ -59,13 +60,15 @@
                             <option value="blue">Blue</option>
                             <option value="green">Green</option>
                         </select>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </form>
              <img id="cat-pic" src="" alt="cat pic">
         </section>
         <section id="vote-on-animal" class="compare"></section>
         <h2>Vote for your favorite animal</h2>
+        <button class="dog-vote" id="dog-vote">Vote Dogs!</button>
+        <button class="cat-vote" id="cat-vote">Vote Cats!</button>
          </section>
 
     </main>
