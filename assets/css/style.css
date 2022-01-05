@@ -53,8 +53,7 @@ h2 {
     justify-content: center;
     align-items: center;
     font-size: 40px;
-    
-    padding: 60px;
+    padding: 80px 75px;
 }
 
 #cat-fact {
@@ -89,15 +88,15 @@ form {
 }
 
 .submit-btn {
-    width: 15vh;
-    height: 15vh;
-    margin: 25px 20px;
+    width: 18vh;
+    height: 18vh;
+    margin: 25px 200px;
     color: white;
     border-radius: 300px;
     background-color:#ce1b1b;
     margin: 30px 150px 90px 300px;
     border: 2px solid lightgray;
-    font-size: 1.5rem;
+    font-size: 1.55rem;
     font-weight: 900;
     cursor: pointer;
 }
