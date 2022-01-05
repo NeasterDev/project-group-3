@@ -13,7 +13,7 @@ body {
 
 header {
     padding: 20px;
-    background-color: #ce1b1b;
+    background-color: #ce1b1b !important;
     color: #ffffff;
     border-bottom: 3px solid black;
 }
@@ -21,7 +21,7 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 ul {
@@ -76,8 +76,8 @@ form {
     padding: 60px;
 }
 
-input {
-    
+.submit-btn {
+    margin: 50px 10rem;
 }
 
 button {
@@ -86,7 +86,7 @@ button {
     color: white;
     border-radius: 350px;
     background-color:#ce1b1b;
-    margin: 30px 190px 90px 310px;
+    margin: 30px 150px 90px 300px;
     border: 2px solid lightgray;
     font-size: 3rem;
     font-weight: 900;
