@@ -93,29 +93,29 @@ fetch("https://dog.ceo/api/breeds/image/random").then(function (response) {
 })
 
 //VOTING SCRIPT
-var scores = {
-    dogs:0,
-    cats:0
-}
-
 storage = window.localStorage;
 
-storage.setItem('scores', JSON.stringify(scores));
-var localScores = JSON.parse(storage.getItem('scores'));
+var results = document.getElementById('results');
+var DOGS = 0;
+var CATS = 0;
 
-var DOGS = localScores.dogs;
-var CATS = localScores.cats;
-console.log("DOGS: " + localScores.dogs);
-console.log("CATS: " + localScores.cats);
+if(storage.getItem('dogs')) {
+    console.log(storage.getItem('dogs'));
+    DOGS = +storage.getItem('dogs');
+    
+}
+if(storage.getItem('cats')) {
+    CATS = +storage.getItem('cats');
+}
 
+results.innerHTML = 'Total: ' + (DOGS + CATS);
+results.innerHTML += '<br />DOGS: ' + DOGS;
+results.innerHTML += '<br />CATS: ' + CATS;
 
 function refreshResults() {
-    scores.dogs = DOGS;
-    scores.cats = CATS;
-    storage.setItem('scores', JSON.stringify(scores));
-
-    var results = document.getElementById('results');
-    results.innerHTML = 'total: ' + (DOGS + CATS);
+    storage.setItem('dogs', DOGS);
+    storage.setItem('cats', CATS);
+    results.innerHTML = 'Total: ' + (DOGS + CATS);
     results.innerHTML += '<br />DOGS: ' + DOGS;
     results.innerHTML += '<br />CATS: ' + CATS;
 }
