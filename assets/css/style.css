@@ -77,7 +77,21 @@ form {
 }
 
 .submit-btn {
-    margin: 50px 10rem;
+    width: 15vh;
+    height: 15vh;
+    margin: 25px 20px;
+    color: white;
+    border-radius: 300px;
+    background-color:#ce1b1b;
+    margin: 30px 150px 90px 300px;
+    border: 2px solid lightgray;
+    font-size: 1.5rem;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: black;
 }
 
 button {
