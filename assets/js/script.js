@@ -13,6 +13,7 @@ const dogPic = document.querySelector('#dog-pic');
 const catFact = document.querySelector('#cat-fact');
 const dogFact = document.querySelector('#dog-fact');
 
+
 const dogFactArray = [
     "All dogs can be traced back 40 million years ago to a weasel-like animal called the Miacis which dwelled in trees and dens. The Miacis later evolved into the Tomarctus, a direct forbear of the genus Canis, which includes the wolf and jackal as well as the dog.",
     "Ancient Egyptians revered their dogs. When a pet dog would die, the owners shaved off their eyebrows, smeared mud in their hair, and mourned aloud for days.",
@@ -92,10 +93,27 @@ fetch("https://dog.ceo/api/breeds/image/random").then(function (response) {
 })
 
 //VOTING SCRIPT
-var DOGS = 0;
-var CATS = 0;
+var scores = {
+    dogs:0,
+    cats:0
+}
+
+storage = window.localStorage;
+
+storage.setItem('scores', JSON.stringify(scores));
+var localScores = JSON.parse(storage.getItem('scores'));
+
+var DOGS = localScores.dogs;
+var CATS = localScores.cats;
+console.log("DOGS: " + localScores.dogs);
+console.log("CATS: " + localScores.cats);
+
 
 function refreshResults() {
+    scores.dogs = DOGS;
+    scores.cats = CATS;
+    storage.setItem('scores', JSON.stringify(scores));
+
     var results = document.getElementById('results');
     results.innerHTML = 'total: ' + (DOGS + CATS);
     results.innerHTML += '<br />DOGS: ' + DOGS;
