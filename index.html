@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;400;900&family=Montserrat&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,600&family=Source+Sans+Pro&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;400;900&family=Montserrat&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,600&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- Import materialize.css -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Animals</title>
 </head>
@@ -19,14 +19,14 @@
         <nav>
             <ul>
                 <li>
-                    <a href="#dogs">Dogs</a>
+                    <a href="#dogs-first">Dogs</a>        
                 </li>
                 <li>
-                    <a href="#cats">Cats</a>
+                    <a href="#cats-second">Cats</a>
                 </li>
                 <li>
-                    <a href="#vote">Vote</a>
-                </li>
+                    <a href="#vote-on-animal">Vote</a>
+                </li>      
             </ul>
         </nav>
     </header>
@@ -35,10 +35,10 @@
             <h2>Dog Facts</h2>
             <form id="dog-form" action="#">
                 <img id="dog-pic" src="" alt="dog pic">
-
+            
                 <div>
-
-                    <input type="submit" name="dog-pic" id="dog-pic">
+                   
+                    <input class="submit-btn" type="submit" name="dog-pic" id="dog-pic">
                     <label for="dog-pic"></label>
 
                 </div>
@@ -52,10 +52,13 @@
             <h2>Cat Facts</h2>
             <form id="cat-form" action="#">
                 <img id="cat-pic" src="https://cataas.com/cat" alt="cat pic">
-
+             
                 <div>
-
-                    <input type="submit" name="dog-pic" id="dog-pic">
+                   
+                    <input class="submit-btn" type="submit" name="dog-pic" id="dog-pic">
+                    <div>
+                        <h3 id="cat-fact"></h3>
+                    </div>
                     <label for="cat-pic"></label>
                     <input type="checkbox" id="gif" name="gif">
                     <label for="gif">Gif</label>

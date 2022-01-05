@@ -14,16 +14,12 @@ body {
 
 header {
     padding: 20px;
-    background-color: #ce1b1b;
+    background-color: #ce1b1b !important;
     color: #ffffff;
     border-bottom: 3px solid black;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    color: #ffffff;
-}
+
 
 ul {
     display: flex;
@@ -77,6 +73,23 @@ form {
     padding: 60px;
 }
 
+.submit-btn {
+    width: 15vh;
+    height: 15vh;
+    margin: 25px 20px;
+    color: white;
+    border-radius: 300px;
+    background-color:#ce1b1b;
+    margin: 30px 150px 90px 300px;
+    border: 2px solid lightgray;
+    font-size: 1.5rem;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: black;
+}
 
 button {
     width: 340px;
@@ -84,7 +97,7 @@ button {
     color: white;
     border-radius: 350px;
     background-color:#ce1b1b;
-    margin: 30px 190px 90px 310px;
+    margin: 30px 150px 90px 300px;
     border: 2px solid lightgray;
     font-size: 3rem;
     font-weight: 900;
@@ -100,7 +113,12 @@ hr {
     width: 96%;
     margin: auto;
     border: 2px solid black;
+}
 
+#results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {
@@ -109,4 +127,22 @@ footer {
     color: white;
     text-align: left;
     border-top: 2px solid #ce1b1b;
+}
+
+@media screen and (max-width: 980px) {
+    nav {
+        align-items: flex-start;
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    ul {
+        margin: 0;
+    }
+
+    nav { 
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
