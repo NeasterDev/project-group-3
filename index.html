@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;400;900&family=Montserrat&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,600&family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <!-- Import materialize.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Animals</title>
@@ -15,27 +15,26 @@
 
 <body>
     <header>
-        <h1>Dogs vs Cats</h1>
         <nav>
-            <ul>
-                <li>
-                    <a href="#dogs-first">Dogs</a>        
-                </li>
-                <li>
-                    <a href="#cats-second">Cats</a>
-                </li>
-                <li>
-                    <a href="#vote-on-animal">Vote</a>
-                </li>      
-            </ul>
-        </nav>
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo"> Dogs vs Cats</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#dog-first">Dog</a></li>
+                <li><a href="#cats-second">Cats</a></li>
+                <li><a href="#vote-on-animal">Vote</a></li>
+              </ul>
+            </div>
+          </nav>
     </header>
     <main>
         <section id="dogs-first" class="compare">
             <h2>Dog Facts</h2>
             <form id="dog-form" action="#">
                 <img id="dog-pic" src="" alt="dog pic">
-            
+                
+                <div>
+                    <h3 id="dog-fact"></h3>
+                </div>
                 <div>
                    
                     <input class="submit-btn" type="submit" name="dog-pic" id="dog-pic">
@@ -43,15 +42,16 @@
 
                 </div>
             </form> 
-            <div>
-                <h3 id="dog-fact"></h3>
-            </div>
         </section>
 
         <section id="cats-second" class="compare">
             <h2>Cat Facts</h2>
             <form id="cat-form" action="#">
                 <img id="cat-pic" src="https://cataas.com/cat" alt="cat pic">
+
+                <div>
+                    <h3 id="cat-fact"></h3>
+                </div>
              
                 <div>
                    
@@ -61,24 +61,21 @@
                     </div>
                     <label for="cat-pic"></label>
                     <input type="checkbox" id="gif" name="gif">
-                    <label for="gif">Gif</label>
+                    <label for="gif"></label>
                     <input type="text" id="says" name="says">
-                    <label for="says">Caption</label>
+                    <label for="says">Caption the gif</label>
                     <br>
                     <label for="colors">Colors</label>
-                    <select id="colors" name="colors">
+                    <select name="colors" id="colors">
                         <option value="red">Red</option>
                         <option value="blue">Blue</option>
                         <option value="green">Green</option>
                     </select>
+                      
 
-                </div>
-            </form>
-            <div>
-                <h3 id="cat-fact"></h3>
-            </div>
+
         </section>
-
+        
         <hr>
 
         <section id="vote-on-animal" class="compare">
@@ -86,9 +83,9 @@
             <button class="dog-vote" id="dog-vote">Vote Dogs!</button>
             <button class="cat-vote" id="cat-vote">Vote Cats!</button>
             <h3 id="results">
-                <br>total: 0</br>
-                <br>DOGS: 0</br>
-                <br>CATS: 0</br>
+                Total: 0
+                DOGS: 0
+                CATS: 0
             </h3>
         </section>
 
