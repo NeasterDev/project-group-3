@@ -64,7 +64,7 @@ p {
 }
 
 img {
-    padding: 0 15px 0;
+    padding: 0 50px 0;
     width: 400px;
     border-radius: 200px;
 }
@@ -76,13 +76,17 @@ form {
     padding: 60px;
 }
 
+input {
+    
+}
+
 button {
-    width: 350px;
+    width: 340px;
     height: 200px;
     color: white;
-    border-radius: 400px;
+    border-radius: 350px;
     background-color:#ce1b1b;
-    margin: 30px 200px 90px 320px;
+    margin: 30px 190px 90px 310px;
     border: 2px solid lightgray;
     font-size: 3rem;
     font-weight: 900;
