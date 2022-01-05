@@ -57,16 +57,28 @@ h2 {
     padding: 60px;
 }
 
-p {
+#cat-fact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+#dog-fact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 30px;
     font-weight: 100;
 }
 
 img {
     padding: 0 50px 0;
     width: 400px;
-    border-radius: 200px;
+    border-radius: 100px;
 }
 
 form {
@@ -92,6 +104,7 @@ form {
 
 .submit-btn:hover {
     background-color: black;
+    box-shadow: 5px 5px 20px rgb(192, 192, 192)
 }
 
 button {
@@ -109,6 +122,7 @@ button {
 
 button:hover {
     background-color: black;
+    box-shadow: 5px 5px 20px rgb(192, 192, 192)
 }
 
 hr {
@@ -121,6 +135,11 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 35px;
+}
+
+#results:after {
+    display: block;
 }
 
 footer {
