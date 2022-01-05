@@ -43,14 +43,14 @@ catFormEl.addEventListener('submit', function(event) {
     var url = "https://cataas.com/cat";
     var factUrl = "https://meowfacts.herokuapp.com/";
 
-    if(gifEl.checked) {
+    if (gifEl.checked) {
         console.log("GIF");
         url += "/gif";
-    }if(saysEl.value) {
+    } if (saysEl.value) {
         console.log("saysEl");
         url += "/says/" + saysEl.value;
-        
-    }if(colorEl.value) {
+
+    } if (colorEl.value) {
         console.log("colorEl");
         url += "?color=" + colorEl.value;
     }
@@ -67,18 +67,29 @@ catFormEl.addEventListener('submit', function(event) {
 })
 // https://dog.ceo/dog-api/documentation/random
 
+<<<<<<< HEAD
 
 dogForm.addEventListener("submit", function(event) {
     event.preventDefault();
     var url = "https://dog.ceo/api/breeds/image/random";
     //var factUrl = "https://cors-anywhere.herokuapp.com/https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1";
     fetch(url).then(function(response) {
+=======
+// cat fact
+// https://meowfacts.herokuapp.com/
+dogForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    var url = "https://dog.ceo/api/breeds/image/random";
+    var factUrl = "https://meowfacts.herokuapp.com/";
+    fetch(url).then(function (response) {
+>>>>>>> 875959e0a092d725e8553713400825a6940ea03f
         return response.json();
-    }).then (function(data) {
+    }).then(function (data) {
         url = data.message;
         dogPic.src = url;
     })
 
+<<<<<<< HEAD
 
     dogFact.textContent = dogFactArray[Math.floor(Math.random() * dogFactArray.length)];
         
@@ -90,3 +101,40 @@ fetch("https://dog.ceo/api/breeds/image/random").then(function(response) {
     url = data.message;
     dogPic.src = url;
 })
+=======
+    fetch(factUrl).then(function (response) {
+        return response.json();
+    }).then(function (data) {
+        var fact = data.data[0];
+        //catLabel.textContent = fact;
+        console.log("Cat fact: " + fact)
+    })
+
+    // fetch("./api.json").then(function(response) {
+    //     return response.json();
+    // }).then(function(data) {
+    //     console.log(data.fact);
+    // });
+})
+
+//VOTING SCRIPT
+var DOGS = 0;
+var CATS = 0;
+
+function refreshResults() {
+    var results = document.getElementById('results');
+    results.innerHTML = 'total: ' + (DOGS + CATS);
+    results.innerHTML += '<br />DOGS: ' + DOGS;
+    results.innerHTML += '<br />CATS: ' + CATS;
+}
+
+document.getElementById('dog-vote').addEventListener('click', function () {
+    DOGS++;
+    refreshResults();
+});
+
+document.getElementById('cat-vote').addEventListener('click', function () {
+    CATS++;
+    refreshResults();
+});
+>>>>>>> 875959e0a092d725e8553713400825a6940ea03f
