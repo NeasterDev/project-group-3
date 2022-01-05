@@ -69,6 +69,10 @@ img {
     border-radius: 200px;
 }
 
+img p {
+    border: 1px solid black;
+}
+
 form {
     display: flex;
     justify-content: center;
@@ -110,4 +114,22 @@ footer {
     color: white;
     text-align: left;
     border-top: 2px solid #ce1b1b;
+}
+
+@media screen and (max-width: 980px) {
+    nav {
+        align-items: flex-start;
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    ul {
+        margin: 0;
+    }
+
+    nav { 
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }

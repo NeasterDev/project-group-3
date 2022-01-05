@@ -13,18 +13,18 @@ const dogPic = document.querySelector('#dog-pic');
 const catLabel = document.querySelector('#cat-label');
 
 // https://cataas.com/#/
-catFormEl.addEventListener('submit', function(event) {
+catFormEl.addEventListener('submit', function (event) {
     event.preventDefault();
     var url = "https://cataas.com/cat";
 
-    if(gifEl.checked) {
+    if (gifEl.checked) {
         console.log("GIF");
         url += "/gif";
-    }if(saysEl.value) {
+    } if (saysEl.value) {
         console.log("saysEl");
         url += "/says/" + saysEl.value;
-        
-    }if(colorEl.value) {
+
+    } if (colorEl.value) {
         console.log("colorEl");
         url += "?color=" + colorEl.value;
     }
@@ -34,28 +34,49 @@ catFormEl.addEventListener('submit', function(event) {
 
 // cat fact
 // https://meowfacts.herokuapp.com/
-dogForm.addEventListener("submit", function(event) {
+dogForm.addEventListener("submit", function (event) {
     event.preventDefault();
     var url = "https://dog.ceo/api/breeds/image/random";
     var factUrl = "https://meowfacts.herokuapp.com/";
-    fetch(url).then(function(response) {
+    fetch(url).then(function (response) {
         return response.json();
-    }).then (function(data) {
+    }).then(function (data) {
         url = data.message;
         dogPic.src = url;
     })
 
-    fetch(factUrl).then(function(response) {
+    fetch(factUrl).then(function (response) {
         return response.json();
-    }).then(function(data) {
+    }).then(function (data) {
         var fact = data.data[0];
         //catLabel.textContent = fact;
         console.log("Cat fact: " + fact)
     })
-    
+
     // fetch("./api.json").then(function(response) {
     //     return response.json();
     // }).then(function(data) {
     //     console.log(data.fact);
     // });
 })
+
+//VOTING SCRIPT
+var DOGS = 0;
+var CATS = 0;
+
+function refreshResults() {
+    var results = document.getElementById('results');
+    results.innerHTML = 'total: ' + (DOGS + CATS);
+    results.innerHTML += '<br />DOGS: ' + DOGS;
+    results.innerHTML += '<br />CATS: ' + CATS;
+}
+
+document.getElementById('dog-vote').addEventListener('click', function () {
+    DOGS++;
+    refreshResults();
+});
+
+document.getElementById('cat-vote').addEventListener('click', function () {
+    CATS++;
+    refreshResults();
+});
