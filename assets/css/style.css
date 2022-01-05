@@ -69,10 +69,6 @@ img {
     border-radius: 200px;
 }
 
-img p {
-    border: 1px solid black;
-}
-
 form {
     display: flex;
     justify-content: center;
@@ -105,7 +101,12 @@ hr {
     width: 96%;
     margin: auto;
     border: 2px solid black;
+}
 
+#results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {
