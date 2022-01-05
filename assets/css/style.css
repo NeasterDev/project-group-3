@@ -110,11 +110,3 @@ footer {
     text-align: left;
     border-top: 2px solid #ce1b1b;
 }
-           
-  @media only screen and (max-width:768px){
-  
-    body {
-      background-color: white;
-      flex-wrap: wrap;
-    }
-  }
