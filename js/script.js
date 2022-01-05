@@ -66,7 +66,7 @@ var CATS = 0;
 
 function refreshResults() {
     var results = document.getElementById('results');
-    results.innerHTML = 'total: ' + (DOGS + CATS);
+    results.innerHTML = 'Total: ' + (DOGS + CATS);
     results.innerHTML += '<br />DOGS: ' + DOGS;
     results.innerHTML += '<br />CATS: ' + CATS;
 }
