@@ -53,8 +53,9 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-style: bolder;
-    font-size: 45px;
+    border-radius: 20px;
+    font-style: bold;
+    font-size: 65px;
     padding: 50px 50px;
     flex-wrap: wrap;
 }
@@ -63,7 +64,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 25px auto;
+    margin:30px auto;
     font-size: 30px;
     font-weight: 100;
 }
@@ -72,7 +73,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 25px auto;
+    margin: 30px auto;
     font-size: 30px;
     font-weight: 100;
 }
@@ -114,11 +115,11 @@ form {
     box-shadow: 5px 5px 20px black;
 }
 
+
 button {
-    display: inline;
-    width: 390px;
-    height: 210px;
-    margin: 20px 50px;
+    width: 400px;
+    height: 200px;
+    margin: 30px;
     color: white;
     background-color:#ce1b1b;
     border: 2px solid lightgray;
@@ -139,19 +140,21 @@ hr {
     border: 2px solid black;
 }
 
+
 #results {
     background-color:#ce1b1b;
-    width: 30%;
-    border-radius: 5px;
-    padding: 25px;
+    font-size: 28px;
+    width: 18%;
+    color: white;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 40px auto;
     box-shadow: 2px 2px 2px black;
-
+    text-align-last: justify;
+    text-transform: uppercase;
 }
 
-#results:after {
-    display: block;
-
-}
 
 footer {
     Padding: 30px;
@@ -173,13 +176,13 @@ nav {
 
 .dog-vote {
     display: flex;
-    justify-content: center;
-   align-items: center;
+justify-content: center;
+    align-items: center;
 }
 
 .cat-vote {
     display: flex;
-    justify-content: center;
+justify-content: center;
     align-items: center;
 }
 
