@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+   /* flex-wrap: wrap; */
 }
 
 body {
@@ -9,6 +10,8 @@ body {
     letter-spacing: 1px;
     width: 100%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -16,13 +19,10 @@ header {
     background-color: #ce1b1b !important;
     color: #ffffff;
     border-bottom: 3px solid black;
+    flex-wrap: wrap;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    color: #ffffff !important;
-}
+
 
 ul {
     display: flex;
@@ -30,17 +30,20 @@ ul {
     width: 500vh;
     justify-content: right;
     font-size: 20px;
+    flex-wrap: wrap;
 }
 
 li {
     position: relative;
     text-decoration: none;
     margin: 10px;
+    flex-wrap: wrap;
 }
 
 a {
     color: white;
     cursor: pointer;
+    flex-wrap: wrap;
 }
 
 h1 {
@@ -54,6 +57,7 @@ h2 {
     align-items: center;
     font-size: 40px;
     padding: 80px 75px;
+    flex-wrap: wrap;
 }
 
 #cat-fact {
@@ -74,6 +78,10 @@ h2 {
     font-weight: 100;
 }
 
+#colors {
+    display: inline;
+}
+
 img {
     padding: 0 50px 0;
     width: 400px;
@@ -85,6 +93,7 @@ form {
     justify-content: center;
     align-items: center;
     padding: 60px;
+    flex-direction: column;
 }
 
 .submit-btn {
@@ -99,6 +108,7 @@ form {
     font-size: 1.55rem;
     font-weight: 900;
     cursor: pointer;
+    flex-wrap: wrap;
 }
 
 .submit-btn:hover {
@@ -112,11 +122,12 @@ button {
     color: white;
     border-radius: 350px;
     background-color:#ce1b1b;
-    margin: 30px 150px 90px 300px;
+    margin: 30px 0px 90px 0px;
     border: 2px solid lightgray;
     font-size: 3rem;
     font-weight: 900;
     cursor: pointer;
+
 }
 
 button:hover {
@@ -131,14 +142,17 @@ hr {
 }
 
 #results {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 35px;
+    background-color:#ce1b1b;
+    width: 40%;
+    border-radius: 5px;
+    padding: 25px;
+    box-shadow: 2px 2px 2px black;
+
 }
 
 #results:after {
     display: block;
+
 }
 
 footer {
@@ -149,20 +163,33 @@ footer {
     border-top: 2px solid #ce1b1b;
 }
 
-@media screen and (max-width: 980px) {
-    nav {
-        align-items: flex-start;
-        display: inline-block;
+nav{
+    background-color: #ce1b1b;
+    flex-wrap: wrap;
+}
+.compare{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dog-vote{
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#cat-vote{
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    body {
+        flex-wrap: wrap;
     }
 }
 
-@media screen and (max-width: 1000px) {
-    ul {
-        margin: 0;
-    }
 
-    nav { 
-        display: flex;
-        flex-direction: column-reverse;
-    }
-}
