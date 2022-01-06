@@ -15,14 +15,12 @@ body {
 }
 
 header {
-    padding: 20px;
+    padding: 30px 40px;
     background-color: #ce1b1b !important;
     color: #ffffff;
     border-bottom: 3px solid black;
     flex-wrap: wrap;
 }
-
-
 
 ul {
     display: flex;
@@ -55,8 +53,9 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
-    padding: 80px 75px;
+    font-style: bolder;
+    font-size: 45px;
+    padding: 50px 50px;
     flex-wrap: wrap;
 }
 
@@ -64,7 +63,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin: 25px auto;
     font-size: 30px;
     font-weight: 100;
 }
@@ -73,7 +72,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin: 25px auto;
     font-size: 30px;
     font-weight: 100;
 }
@@ -99,13 +98,12 @@ form {
 .submit-btn {
     width: 18vh;
     height: 18vh;
-    margin: 25px 200px;
+    margin: 80px 100px 0 100px;
     color: white;
     border-radius: 300px;
     background-color:#ce1b1b;
-    margin: 30px 150px 90px 300px;
     border: 2px solid lightgray;
-    font-size: 1.55rem;
+    font-size: 1.75rem;
     font-weight: 900;
     cursor: pointer;
     flex-wrap: wrap;
@@ -113,26 +111,26 @@ form {
 
 .submit-btn:hover {
     background-color: black;
-    box-shadow: 5px 5px 20px rgb(192, 192, 192)
+    box-shadow: 5px 5px 20px black;
 }
 
 button {
-    width: 340px;
-    height: 200px;
+    display: inline;
+    width: 390px;
+    height: 210px;
+    margin: 20px 50px;
     color: white;
-    border-radius: 350px;
     background-color:#ce1b1b;
-    margin: 30px 0px 90px 0px;
     border: 2px solid lightgray;
+    border-radius: 350px;
     font-size: 3rem;
     font-weight: 900;
     cursor: pointer;
-
 }
 
 button:hover {
     background-color: black;
-    box-shadow: 5px 5px 20px rgb(192, 192, 192)
+    box-shadow: 5px 5px 20px black;
 }
 
 hr {
@@ -143,7 +141,7 @@ hr {
 
 #results {
     background-color:#ce1b1b;
-    width: 40%;
+    width: 30%;
     border-radius: 5px;
     padding: 25px;
     box-shadow: 2px 2px 2px black;
@@ -156,34 +154,34 @@ hr {
 }
 
 footer {
-    Padding: 40px;
+    Padding: 30px;
     background-color: black;
     color: white;
     text-align: left;
     border-top: 2px solid #ce1b1b;
 }
 
-nav{
+nav {
     background-color: #ce1b1b;
     flex-wrap: wrap;
 }
-.compare{
+.compare {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#dog-vote{
-    flex-wrap: wrap;
-    text-align: center;
+.dog-vote {
+    display: flex;
+    justify-content: center;
+   align-items: center;
 }
 
-#cat-vote{
-    flex-wrap: wrap;
-    text-align: center;
+.cat-vote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-
 
 
 @media only screen and (max-width: 768px) {
@@ -191,6 +189,3 @@ nav{
         flex-wrap: wrap;
     }
 }
-
-
-
