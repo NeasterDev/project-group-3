@@ -53,8 +53,9 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
     font-style: bold;
-    font-size: 45px;
+    font-size: 68px;
     padding: 50px 50px;
     flex-wrap: wrap;
 }
@@ -63,7 +64,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 25px auto;
+    margin:30px auto;
     font-size: 30px;
     font-weight: 100;
 }
@@ -72,7 +73,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 25px auto;
+    margin: 30px auto;
     font-size: 30px;
     font-weight: 100;
 }
@@ -142,13 +143,13 @@ hr {
 
 #results {
     background-color:#ce1b1b;
-    font-size: 30px;
-    width: 18%;
+    font-size: 28px;
+    width: 15%;
     color: white;
-    border: 1px solid black;
+    border: 1px solid lightgray;
     border-radius: 7px;
     padding: 10px;
-    margin: 30px auto;
+    margin: 40px auto;
     box-shadow: 2px 2px 2px black;
     text-align-last: justify;
     text-transform: uppercase;
