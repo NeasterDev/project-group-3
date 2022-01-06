@@ -53,7 +53,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-style: bolder;
+    font-style: bold;
     font-size: 45px;
     padding: 50px 50px;
     flex-wrap: wrap;
@@ -116,9 +116,9 @@ form {
 
 button {
     display: inline;
-    width: 390px;
+    width: 400px;
     height: 210px;
-    margin: 20px 50px;
+    margin: 30px;
     color: white;
     background-color:#ce1b1b;
     border: 2px solid lightgray;
@@ -139,18 +139,21 @@ hr {
     border: 2px solid black;
 }
 
+
 #results {
     background-color:#ce1b1b;
-    width: 30%;
-    border-radius: 5px;
-    padding: 20px;
+    font-size: 30px;
+    width: 18%;
+    color: white;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 30px auto;
     box-shadow: 2px 2px 2px black;
+    text-align-last: justify;
+    text-transform: uppercase;
 }
 
-#results:after {
-    display: block;
-
-}
 
 footer {
     Padding: 30px;

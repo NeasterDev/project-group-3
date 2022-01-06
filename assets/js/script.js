@@ -116,7 +116,7 @@ if(storage.getItem('cats')) {
 }
 
 // sets the initial html for the results
-results.innerHTML = 'Total: ' + (DOGS + CATS);
+
 results.innerHTML += '<br />DOGS: ' + DOGS;
 results.innerHTML += '<br />CATS: ' + CATS;
 
