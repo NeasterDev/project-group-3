@@ -13,7 +13,6 @@ const dogPic = document.querySelector('#dog-pic');
 const catFact = document.querySelector('#cat-fact');
 const dogFact = document.querySelector('#dog-fact');
 
-// array of dog facts
 const dogFactArray = [
     "All dogs can be traced back 40 million years ago to a weasel-like animal called the Miacis which dwelled in trees and dens. The Miacis later evolved into the Tomarctus, a direct forbear of the genus Canis, which includes the wolf and jackal as well as the dog.",
     "Ancient Egyptians revered their dogs. When a pet dog would die, the owners shaved off their eyebrows, smeared mud in their hair, and mourned aloud for days.",
@@ -39,14 +38,11 @@ const dogFactArray = [
 // https://cataas.com/#/
 // cat fact
 // https://meowfacts.herokuapp.com/
-
-// Listener for cat picture and facts
 catFormEl.addEventListener('submit', function (event) {
     event.preventDefault();
     var url = "https://cataas.com/cat";
     var factUrl = "https://meowfacts.herokuapp.com/";
 
-    // These if statements alter the url based on the user's inputs
     if (gifEl.checked) {
         console.log("GIF");
         url += "/gif";
@@ -66,28 +62,28 @@ catFormEl.addEventListener('submit', function (event) {
     }).then(function (data) {
         var fact = data.data[0];
         catFact.textContent = fact;
+        console.log("Cat fact: " + fact)
     })
 })
 // https://dog.ceo/dog-api/documentation/random
 
-// Listener for dog pictures and facts
+
 dogForm.addEventListener("submit", function (event) {
     event.preventDefault();
     var url = "https://dog.ceo/api/breeds/image/random";
-
+    //var factUrl = "https://cors-anywhere.herokuapp.com/https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1";
     fetch(url).then(function (response) {
         return response.json();
     }).then(function (data) {
         url = data.message;
         dogPic.src = url;
-    });
+    })
 
-    // gets a random fact from the array of dog facts
+
     dogFact.textContent = dogFactArray[Math.floor(Math.random() * dogFactArray.length)];
 
 });
 
-// gets initial dog photo for page
 fetch("https://dog.ceo/api/breeds/image/random").then(function (response) {
     return response.json();
 }).then(function (data) {
@@ -96,31 +92,9 @@ fetch("https://dog.ceo/api/breeds/image/random").then(function (response) {
 })
 
 //VOTING SCRIPT
-
-// make a localstorage variable so i dont have to type window.localstorage
-storage = window.localStorage;
-
-// Variable for the results of voting html element
-var results = document.getElementById('results');
-
-// variables to hold the voting scores
 var DOGS = 0;
 var CATS = 0;
 
-// if they have already saved votes before then set the scores to the localstorage scores
-if(storage.getItem('dogs')) {
-    DOGS = +storage.getItem('dogs');
-}
-if(storage.getItem('cats')) {
-    CATS = +storage.getItem('cats');
-}
-
-// sets the initial html for the results
-results.innerHTML = 'Total: ' + (DOGS + CATS);
-results.innerHTML += '<br />DOGS: ' + DOGS;
-results.innerHTML += '<br />CATS: ' + CATS;
-
-// after they vote update the voting results
 function refreshResults() {
     storage.setItem('dogs', DOGS);
     storage.setItem('cats', CATS);
@@ -129,13 +103,11 @@ function refreshResults() {
     results.innerHTML += '<br />CATS: ' + CATS;
 }
 
-// event listener for the dog voting button
 document.getElementById('dog-vote').addEventListener('click', function () {
     DOGS++;
     refreshResults();
 });
 
-// event listener for the cat voting button
 document.getElementById('cat-vote').addEventListener('click', function () {
     CATS++;
     refreshResults();

@@ -145,6 +145,7 @@ hr {
     border-radius: 5px;
     padding: 25px;
     box-shadow: 2px 2px 2px black;
+    border: 1px solid #d4d4d4;
 
 }
 
@@ -183,7 +184,20 @@ nav {
     align-items: center;
 }
 
+#gif{
+    display: inline-block;
+}
 
+/* input[type="checkbox"] {
+    appearance: checkbox !important;
+} */
+/* input[type="checkbox"] {
+    appearance: checkbox !important;
+} */
+
+/* .checkbox{
+    display: inline-block;
+} */
 @media only screen and (max-width: 768px) {
     body {
         flex-wrap: wrap;
