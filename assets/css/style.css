@@ -143,9 +143,8 @@ hr {
     background-color:#ce1b1b;
     width: 30%;
     border-radius: 5px;
-    padding: 25px;
+    padding: 20px;
     box-shadow: 2px 2px 2px black;
-
 }
 
 #results:after {
