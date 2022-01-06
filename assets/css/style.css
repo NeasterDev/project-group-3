@@ -115,10 +115,10 @@ form {
     box-shadow: 5px 5px 20px black;
 }
 
+
 button {
-    display: inline;
     width: 400px;
-    height: 210px;
+    height: 200px;
     margin: 30px;
     color: white;
     background-color:#ce1b1b;
@@ -144,7 +144,7 @@ hr {
 #results {
     background-color:#ce1b1b;
     font-size: 28px;
-    width: 15%;
+    width: 18%;
     color: white;
     border: 1px solid lightgray;
     border-radius: 7px;
@@ -176,13 +176,13 @@ nav {
 
 .dog-vote {
     display: flex;
-    justify-content: center;
-   align-items: center;
+justify-content: center;
+    align-items: center;
 }
 
 .cat-vote {
     display: flex;
-    justify-content: center;
+justify-content: center;
     align-items: center;
 }
 
