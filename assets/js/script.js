@@ -94,7 +94,9 @@ fetch("https://dog.ceo/api/breeds/image/random").then(function (response) {
     url = data.message;
     dogPic.src = url;
 })
+storage = window.localStorage;
 
+var results = document.getElementById ('results');
 //VOTING SCRIPT
 
 // make a localstorage variable so i dont have to type window.localstorage
