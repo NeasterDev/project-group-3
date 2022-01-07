@@ -90,7 +90,9 @@ fetch("https://dog.ceo/api/breeds/image/random").then(function (response) {
     url = data.message;
     dogPic.src = url;
 })
+storage = window.localStorage;
 
+var results = document.getElementById ('results');
 //VOTING SCRIPT
 var DOGS = 0;
 var CATS = 0;
