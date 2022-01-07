@@ -5,6 +5,7 @@
 ## Of course you do! While learning about your favorite animal you also get unlimited access to pictures of all kinds of cats and dogs!
 
 # Once you have had enough pictures and facts feel free the enter the poll to find out which is the more popular animal!*
+## Link to website --> https://crazypants300.github.io/project-group-3/ 
 
 ![](./assets/images/ss-1.jpg)
 ![](./assets/images/ss-2.jpg)
