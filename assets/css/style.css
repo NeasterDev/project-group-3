@@ -33,14 +33,16 @@ ul {
 li {
     position: relative;
     text-decoration: none;
-    margin: 10px;
     flex-wrap: wrap;
+
 }
+
 
 a {
     color: white;
     cursor: pointer;
     flex-wrap: wrap;
+
 }
 
 h1 {
@@ -166,6 +168,8 @@ footer {
 nav {
     background-color: #ce1b1b;
     flex-wrap: wrap;
+
+
 }
 
 .compare {
