@@ -167,6 +167,7 @@ nav {
     background-color: #ce1b1b;
     flex-wrap: wrap;
 }
+
 .compare {
     display: flex;
     flex-direction: column;
@@ -175,13 +176,13 @@ nav {
 
 .dog-vote {
     display: flex;
-justify-content: center;
+    justify-content: center;
     align-items: center;
 }
 
 .cat-vote {
     display: flex;
-justify-content: center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -199,4 +200,11 @@ justify-content: center;
     body {
         flex-wrap: wrap;
     }
+
+    #results {
+        width: 20%;
+        font-size: 16px;
+        margin: 0 auto;
+    }
+
 }
