@@ -166,7 +166,9 @@ footer {
 nav {
     background-color: #ce1b1b;
     flex-wrap: wrap;
+
 }
+
 .compare {
     display: flex;
     flex-direction: column;
